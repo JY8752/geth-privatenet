@@ -1,0 +1,102 @@
+INFO [07-27|08:25:21.647] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [07-27|08:25:21.651] Set global gas cap                       cap=50,000,000
+INFO [07-27|08:25:21.652] Allocated trie memory caches             clean=154.00MiB dirty=256.00MiB
+INFO [07-27|08:25:21.653] Allocated cache and file handles         database=/Users/yamanakajunichi/work/myapp/study/blockchain/geth-privatenet/geth/chaindata cache=512.00MiB handles=5120
+INFO [07-27|08:25:21.784] Opened ancient database                  database=/Users/yamanakajunichi/work/myapp/study/blockchain/geth-privatenet/geth/chaindata/ancient readonly=false
+INFO [07-27|08:25:21.785]  
+INFO [07-27|08:25:21.785] --------------------------------------------------------------------------------------------------------------------------------------------------------- 
+INFO [07-27|08:25:21.785] Chain ID:  15 (unknown) 
+INFO [07-27|08:25:21.785] Consensus: unknown 
+INFO [07-27|08:25:21.785]  
+INFO [07-27|08:25:21.785] Pre-Merge hard forks: 
+INFO [07-27|08:25:21.785]  - Homestead:                   0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/homestead.md) 
+INFO [07-27|08:25:21.785]  - Tangerine Whistle (EIP 150): 0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/tangerine-whistle.md) 
+INFO [07-27|08:25:21.785]  - Spurious Dragon/1 (EIP 155): 0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md) 
+INFO [07-27|08:25:21.785]  - Spurious Dragon/2 (EIP 158): 0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md) 
+INFO [07-27|08:25:21.785]  - Byzantium:                   0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/byzantium.md) 
+INFO [07-27|08:25:21.785]  - Constantinople:              0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/constantinople.md) 
+INFO [07-27|08:25:21.785]  - Petersburg:                  0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/petersburg.md) 
+INFO [07-27|08:25:21.786]  - Istanbul:                    0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/istanbul.md) 
+INFO [07-27|08:25:21.786]  - Berlin:                      0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/berlin.md) 
+INFO [07-27|08:25:21.786]  - London:                      <nil> (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/london.md) 
+INFO [07-27|08:25:21.786]  
+INFO [07-27|08:25:21.786] Merge not configured! 
+INFO [07-27|08:25:21.786]  - Hard-fork specification: https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md) 
+INFO [07-27|08:25:21.786] --------------------------------------------------------------------------------------------------------------------------------------------------------- 
+INFO [07-27|08:25:21.786]  
+INFO [07-27|08:25:21.786] Disk storage enabled for ethash caches   dir=/Users/yamanakajunichi/work/myapp/study/blockchain/geth-privatenet/geth/ethash count=3
+INFO [07-27|08:25:21.786] Disk storage enabled for ethash DAGs     dir=/Users/yamanakajunichi/Library/Ethash count=2
+INFO [07-27|08:25:21.787] Initialising Ethereum protocol           network=15 dbversion=<nil>
+INFO [07-27|08:25:21.787] Loaded most recent local header          number=0 hash=7b2e8b..7e0432 td=16384 age=53y3mo4w
+INFO [07-27|08:25:21.788] Loaded most recent local full block      number=0 hash=7b2e8b..7e0432 td=16384 age=53y3mo4w
+INFO [07-27|08:25:21.788] Loaded most recent local fast block      number=0 hash=7b2e8b..7e0432 td=16384 age=53y3mo4w
+WARN [07-27|08:25:21.788] Failed to load snapshot, regenerating    err="missing or corrupted snapshot"
+INFO [07-27|08:25:21.788] Rebuilding state snapshot 
+INFO [07-27|08:25:21.789] Resuming state snapshot generation       root=56e81f..63b421 accounts=0 slots=0 storage=0.00B dangling=0 elapsed="456µs"
+INFO [07-27|08:25:21.789] Generated state snapshot                 accounts=0 slots=0 storage=0.00B dangling=0 elapsed="650.959µs"
+INFO [07-27|08:25:21.789] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [07-27|08:25:21.790] Gasprice oracle is ignoring threshold set threshold=2
+WARN [07-27|08:25:21.790] Error reading unclean shutdown markers   error="leveldb: not found"
+INFO [07-27|08:25:21.790] Starting peer-to-peer node               instance=Geth/v1.10.20-stable/darwin-arm64/go1.18.3
+INFO [07-27|08:25:21.886] New local node record                    seq=1,658,877,921,884 id=3116019c698dc7d9 ip=127.0.0.1 udp=0 tcp=30303
+INFO [07-27|08:25:21.886] Started P2P networking                   self="enode://20ff9d4a9fe69f332e970317e0bad182b3772e8fb971a70022f205255ebbc0c5c0f3594295d4c2e564c8ccad0e65282641e14880e960896d9c68bafd44316fa5@127.0.0.1:30303?discport=0"
+INFO [07-27|08:25:21.887] IPC endpoint opened                      url=/Users/yamanakajunichi/work/myapp/study/blockchain/geth-privatenet/geth.ipc
+WARN [07-27|08:25:21.930] Served eth_coinbase                      reqid=3 duration="18.708µs" err="etherbase must be explicitly specified"
+INFO [07-27|08:25:24.656] Mapped network port                      proto=tcp extport=30303 intport=30303 interface="UPNP IGDv1-IP1"
+INFO [07-27|08:29:20.879] IPC endpoint closed                      url=/Users/yamanakajunichi/work/myapp/study/blockchain/geth-privatenet/geth.ipc
+INFO [07-27|08:29:20.879] Ethereum protocol stopped 
+INFO [07-27|08:29:20.879] Transaction pool stopped 
+INFO [07-27|08:29:20.880] Writing snapshot state to disk           root=56e81f..63b421
+INFO [07-27|08:29:20.880] Persisted trie from memory database      nodes=0 size=0.00B time="6.292µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [07-27|08:29:20.880] Writing clean trie cache to disk         path=/Users/yamanakajunichi/work/myapp/study/blockchain/geth-privatenet/geth/triecache threads=8
+INFO [07-27|08:29:20.882] Persisted the clean trie cache           path=/Users/yamanakajunichi/work/myapp/study/blockchain/geth-privatenet/geth/triecache elapsed=1.556ms
+INFO [07-27|08:29:20.882] Blockchain stopped 
+INFO [07-27|08:40:30.660] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [07-27|08:40:30.664] Set global gas cap                       cap=50,000,000
+INFO [07-27|08:40:30.665] Allocated trie memory caches             clean=154.00MiB dirty=256.00MiB
+INFO [07-27|08:40:30.665] Allocated cache and file handles         database=/Users/yamanakajunichi/work/myapp/study/blockchain/geth-privatenet/geth/chaindata cache=512.00MiB handles=5120
+INFO [07-27|08:40:30.765] Opened ancient database                  database=/Users/yamanakajunichi/work/myapp/study/blockchain/geth-privatenet/geth/chaindata/ancient readonly=false
+INFO [07-27|08:40:30.766]  
+INFO [07-27|08:40:30.766] --------------------------------------------------------------------------------------------------------------------------------------------------------- 
+INFO [07-27|08:40:30.766] Chain ID:  15 (unknown) 
+INFO [07-27|08:40:30.766] Consensus: unknown 
+INFO [07-27|08:40:30.766]  
+INFO [07-27|08:40:30.766] Pre-Merge hard forks: 
+INFO [07-27|08:40:30.767]  - Homestead:                   0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/homestead.md) 
+INFO [07-27|08:40:30.767]  - Tangerine Whistle (EIP 150): 0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/tangerine-whistle.md) 
+INFO [07-27|08:40:30.767]  - Spurious Dragon/1 (EIP 155): 0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md) 
+INFO [07-27|08:40:30.767]  - Spurious Dragon/2 (EIP 158): 0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md) 
+INFO [07-27|08:40:30.767]  - Byzantium:                   0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/byzantium.md) 
+INFO [07-27|08:40:30.767]  - Constantinople:              0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/constantinople.md) 
+INFO [07-27|08:40:30.767]  - Petersburg:                  0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/petersburg.md) 
+INFO [07-27|08:40:30.767]  - Istanbul:                    0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/istanbul.md) 
+INFO [07-27|08:40:30.767]  - Berlin:                      0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/berlin.md) 
+INFO [07-27|08:40:30.767]  - London:                      <nil> (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/london.md) 
+INFO [07-27|08:40:30.767]  
+INFO [07-27|08:40:30.767] Merge not configured! 
+INFO [07-27|08:40:30.767]  - Hard-fork specification: https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md) 
+INFO [07-27|08:40:30.767] --------------------------------------------------------------------------------------------------------------------------------------------------------- 
+INFO [07-27|08:40:30.767]  
+INFO [07-27|08:40:30.768] Disk storage enabled for ethash caches   dir=/Users/yamanakajunichi/work/myapp/study/blockchain/geth-privatenet/geth/ethash count=3
+INFO [07-27|08:40:30.768] Disk storage enabled for ethash DAGs     dir=/Users/yamanakajunichi/Library/Ethash count=2
+INFO [07-27|08:40:30.768] Initialising Ethereum protocol           network=15 dbversion=8
+INFO [07-27|08:40:30.769] Loaded most recent local header          number=0 hash=7b2e8b..7e0432 td=16384 age=53y3mo4w
+INFO [07-27|08:40:30.769] Loaded most recent local full block      number=0 hash=7b2e8b..7e0432 td=16384 age=53y3mo4w
+INFO [07-27|08:40:30.769] Loaded most recent local fast block      number=0 hash=7b2e8b..7e0432 td=16384 age=53y3mo4w
+INFO [07-27|08:40:30.770] Loaded local transaction journal         transactions=0 dropped=0
+INFO [07-27|08:40:30.770] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [07-27|08:40:30.770] Gasprice oracle is ignoring threshold set threshold=2
+INFO [07-27|08:40:30.771] Starting peer-to-peer node               instance=Geth/v1.10.20-stable/darwin-arm64/go1.18.3
+INFO [07-27|08:40:30.870] New local node record                    seq=1,658,877,921,885 id=3116019c698dc7d9 ip=127.0.0.1 udp=0 tcp=30303
+INFO [07-27|08:40:30.870] Started P2P networking                   self="enode://20ff9d4a9fe69f332e970317e0bad182b3772e8fb971a70022f205255ebbc0c5c0f3594295d4c2e564c8ccad0e65282641e14880e960896d9c68bafd44316fa5@127.0.0.1:30303?discport=0"
+INFO [07-27|08:40:30.871] IPC endpoint opened                      url=/Users/yamanakajunichi/work/myapp/study/blockchain/geth-privatenet/geth.ipc
+INFO [07-27|08:40:33.753] Mapped network port                      proto=tcp extport=30303 intport=30303 interface="UPNP IGDv2-IP1"
+INFO [07-27|08:40:40.902] Got interrupt, shutting down... 
+INFO [07-27|08:40:40.903] IPC endpoint closed                      url=/Users/yamanakajunichi/work/myapp/study/blockchain/geth-privatenet/geth.ipc
+INFO [07-27|08:40:40.903] Ethereum protocol stopped 
+INFO [07-27|08:40:40.903] Transaction pool stopped 
+INFO [07-27|08:40:40.903] Writing snapshot state to disk           root=56e81f..63b421
+INFO [07-27|08:40:40.903] Persisted trie from memory database      nodes=0 size=0.00B time="15.083µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [07-27|08:40:40.903] Writing clean trie cache to disk         path=/Users/yamanakajunichi/work/myapp/study/blockchain/geth-privatenet/geth/triecache threads=8
+INFO [07-27|08:40:40.907] Persisted the clean trie cache           path=/Users/yamanakajunichi/work/myapp/study/blockchain/geth-privatenet/geth/triecache elapsed=4.072ms
+INFO [07-27|08:40:40.908] Blockchain stopped 

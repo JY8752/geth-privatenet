@@ -102,3 +102,51 @@ false
 > web3.fromWei(eth.getBalance(eth.accounts[1]), "ether")
 30
 ```
+
+## 送金
+
+```terminal
+//アカウントのロック解除
+> personal.unlockAccount(eth.accounts[1])
+Unlock account 0x5520c468b2a2f8da55f91d8e99fbc941cca884fb
+Passphrase: 
+true
+
+> eth.sendTransaction({from: eth.accounts[1], to: eth.accounts[0], value: web3.toWei(0.01, "ether")})
+"0xff96523023f346f89978e7ea96dc99591a5482650401d25f2458f11f61aa4735"
+
+//送金はバックグラウンドでマイニングの処理を走らせておかないと成功しない
+
+//トランザクションの確認
+> eth.getTransaction('0xac7f81df9e54d203d8eb55d35f08a632e9888e71a31ff8538baacc0b61196dc3')
+{
+  blockHash: "0x879300adbf73b6922f088d659d00da3cb1a9240d43608a6da4845a8a0667623e",
+  blockNumber: 224,
+  from: "0x5520c468b2a2f8da55f91d8e99fbc941cca884fb",
+  gas: 21000,
+  gasPrice: 1000000000,
+  hash: "0xac7f81df9e54d203d8eb55d35f08a632e9888e71a31ff8538baacc0b61196dc3",
+  input: "0x",
+  nonce: 4,
+  r: "0xcbc248c64ca1efbf458075e88508af085de8872fd519ea9dda383008f1b20017",
+  s: "0x7558c078324b09f791267d55785302e7fb50e936bb47a9b51d6c132cff7c9973",
+  to: "0x78fe7b62a9b27b9fe38c8b8900024a4dd4ce301a",
+  transactionIndex: 0,
+  type: "0x0",
+  v: "0x42",
+  value: 10000000000000000
+}
+```
+
+## スマートコントラクト
+
+### コンパイラインストール
+
+```terminal
+brew update
+brew upgrade
+brew tap ethereum/ethereum
+brew install solidity
+//brew linkapps solidity これはエラーでこける
+```
+

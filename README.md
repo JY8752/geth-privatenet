@@ -150,3 +150,15 @@ brew install solidity
 //brew linkapps solidity これはエラーでこける
 ```
 
+## gethの起動
+
+```terminal
+//起動スクリプト実行　(アカウントのアンロックの指定のところがよくわからない)
+/bin/bash geth-start.sh
+
+//起動確認
+geth attach http://localhost:8545
+
+>eth.maning 
+true
+```

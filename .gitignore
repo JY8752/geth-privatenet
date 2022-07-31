@@ -2,3 +2,6 @@ geth
 keystore
 geth_err.log
 history
+
+contracts/hello/out
+contracts/hello/cache

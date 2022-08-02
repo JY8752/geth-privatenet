@@ -159,5 +159,6 @@ forge script script/NFT.s.sol:MyScript --rpc-url $RINKEBY_RPC_URL --private-key 
 ## script で anvil で起動したローカルのプライベートネットにデプロイ
 
 ```terminal
-
+forge script script/NFT.s.sol:MyScript --fork-url http://localhost:8545 \
+ --private-key $PRIVATE_KEY --broadcast
 ```

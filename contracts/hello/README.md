@@ -143,7 +143,7 @@ Listening on 127.0.0.1:8545
 //gethでテストネット繋ぐと30Gくらい容量持ってかれそうなのでやめる
 
 //alchemy
-source .env
+source ../.env
 forge script script/NFT.s.sol:MyScript --rpc-url $RINKEBY_RPC_URL --private-key $PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_KEY -vvvv
 
 Error:

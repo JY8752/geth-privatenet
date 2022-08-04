@@ -3,11 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
+	"local/nft"
 	"log"
-
-	"testnet/nft"
-
-	env "env"
 
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
@@ -15,8 +12,16 @@ import (
 	"github.com/ethereum/go-ethereum/ethclient"
 )
 
+const (
+	//anvilにデプロイしたコントラクトアドレス
+	CONTRACT_ADDRESS string = "0x5fbdb2315678afecb367f032d93f642f64180aa3"
+	//anvilで作成されたアカウント情報
+	PUBLIC_KEY  string = "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
+	PRIVATE_KEY string = "ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+)
+
 func main() {
-	cl, err := ethclient.Dial(env.RinkebyRpcUrl())
+	cl, err := ethclient.Dial("http://127.0.0.1:8545")
 	if err != nil {
 		log.Fatalf("faile to initialize ethclient. err: %v", err)
 	}
@@ -27,14 +32,13 @@ func main() {
 		log.Fatalf("faile to get chaineId. err: %v", err)
 	}
 
-	//rinkeby -> 4
 	fmt.Printf("chaineId: %v\n", chaineId)
 
 	//blockNumber
 	blockNumber, _ := cl.BlockNumber(ctx)
 	fmt.Printf("blockNumber: %v\n", blockNumber)
 
-	address := common.HexToAddress(env.CONTRACT_ADDRESS())
+	address := common.HexToAddress(CONTRACT_ADDRESS)
 
 	nft, err := nft.NewNft(address, cl)
 	if err != nil {
@@ -58,9 +62,14 @@ func main() {
 
 	fmt.Println("----------- mintTo ------------------------------")
 
-	privateKey, err := crypto.HexToECDSA(env.PrivateKey())
+	privateKey, err := crypto.HexToECDSA(PRIVATE_KEY)
 	if err != nil {
 		log.Fatalf("faile to initialize PrivateKey. err: %v", err)
+	}
+
+	gasPrice, err := cl.SuggestGasPrice(context.Background())
+	if err != nil {
+		log.Fatalf("faile to get gasPrice. err: %v", err)
 	}
 
 	auth, err := bind.NewKeyedTransactorWithChainID(privateKey, chaineId)
@@ -68,7 +77,9 @@ func main() {
 		log.Fatalf("faile to initialize transactor. err: %v", err)
 	}
 	auth.Value = mintPrice //wei
-	recipient := common.HexToAddress(env.PUBLIC_KEY())
+	auth.GasPrice = gasPrice
+	auth.GasLimit = uint64(300000)
+	recipient := common.HexToAddress(PUBLIC_KEY)
 
 	tx, err := nft.MintTo(auth, recipient)
 	if err != nil {

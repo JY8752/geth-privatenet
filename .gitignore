@@ -3,7 +3,8 @@ keystore
 geth_err.log
 history
 
+**/.env
+
 contracts/hello/out
 contracts/hello/cache
-contracts/hello/.env
 contracts/hello/broadcast
